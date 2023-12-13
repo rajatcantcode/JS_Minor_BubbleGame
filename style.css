@@ -1,0 +1,96 @@
+
+@font-face {
+  font-family: GilroyDark;
+  src: url(./assets/Gilroy-ExtraBold.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 25px;
+  font-family: GilroyDark;
+  color: white;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+#main {
+  height: 100vh;
+  width: 100%;
+  padding: 5vw;
+  background-color: #191716;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#game {
+  background-color: #e0e2db;
+  height: 80vh;
+  width: 80vw;
+}
+#game-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: white;
+  height: 10%;
+  padding: 0vw 10vw;
+}
+.elem {
+  width: fit-content;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.elem > h1 {
+  color: #191716;
+}
+.box {
+  font-size: 30px;
+  width: fit-content;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e0e2db;
+}
+#game-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  height: calc(80vh - 10%);
+  width: 100%;
+  padding: 2vw;
+  gap: 1vw;
+  margin: 0;
+}
+.bubble {
+  /* change this to make responsive */
+  height: 4vw;
+  width: 4vw;
+  background-color: #e6af2e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 600px) {
+  #game-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    height: calc(80vh - 10%);
+    width: 100%;
+    padding: 4vw;
+    gap: 2vw;
+  }
+  .bubble {
+    /* change this to make responsive */
+    height: 7.7vw;
+    width: 7.7vw;
+  }
+}
